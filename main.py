@@ -18,6 +18,7 @@ def main() -> None:
         print("7. Exit")
         try:
             choice = int(input("Enter your choice (1 to 7): ").strip())
+            print()
         except ValueError: 
             print()
             print("Error : Enter a valid choice")
@@ -26,7 +27,7 @@ def main() -> None:
             case 1:
                 ut.view_all_records(data)
             case 2:
-                pass
+                ut.analyze_air_quality_by_city(data)
             case 3:
                 print("3")
             case 4:
