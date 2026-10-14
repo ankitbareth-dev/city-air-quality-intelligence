@@ -1,13 +1,18 @@
 import pandas as pd
 
-def view_all_records() -> None:
-    print()
+def load_data() -> pd.DataFrame:
 
     file_path = "data/air_quality.csv"
 
     try:
-        data = pd.read_csv(file_path)
-        print(data)
+        return pd.read_csv(file_path)
     except FileNotFoundError:
-        print()
-        print("Error: CSV file not found.")
+        return pd.DataFrame()
+
+def view_all_records(data: pd.DataFrame) -> None:
+    print()
+    print(data)
+              
+def analyze_air_quality_by_city(city: str) -> None:
+    pass
+

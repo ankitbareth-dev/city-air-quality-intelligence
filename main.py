@@ -1,6 +1,10 @@
 import utlis as ut
 
 def main() -> None:
+    data = ut.load_data()
+    if data.empty:
+        print("Error: CSV file not found.")
+        return
     while True:
         print()
         print("======= CITY AIR QUALITY INTELLIGENCE =======")
@@ -20,9 +24,9 @@ def main() -> None:
             continue
         match choice:
             case 1:
-                ut.view_all_records()
+                ut.view_all_records(data)
             case 2:
-                print("2")
+                pass
             case 3:
                 print("3")
             case 4:
