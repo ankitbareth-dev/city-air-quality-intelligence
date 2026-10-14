@@ -5,6 +5,9 @@ def view_all_records() -> None:
 
     file_path = "data/air_quality.csv"
 
-    data = pd.read_csv(file_path)
-
-    print(data)
+    try:
+        data = pd.read_csv(file_path)
+        print(data)
+    except FileNotFoundError:
+        print()
+        print("Error: CSV file not found.")
