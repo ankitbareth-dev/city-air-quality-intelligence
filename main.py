@@ -1,4 +1,6 @@
-def main():
+import utlis as ut
+
+def main() -> None:
     while True:
         print()
         print("======= CITY AIR QUALITY INTELLIGENCE =======")
@@ -18,7 +20,7 @@ def main():
             continue
         match choice:
             case 1:
-                print("1")
+                ut.view_all_records()
             case 2:
                 print("2")
             case 3:
